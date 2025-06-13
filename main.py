@@ -94,6 +94,7 @@ def main():
         choice = input(optiontext)
         if choice not in ("1", "2", "3"):
             print(Colorate.Horizontal(Colors.cyan_to_blue, "Invalid option! Please enter 1, 2 or 3."))
+            os.system("cls")
             continue
 
         if choice == "1":
