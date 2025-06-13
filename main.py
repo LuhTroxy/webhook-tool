@@ -63,7 +63,7 @@ def spam_webhook(webhook_url, message, delay):
                 time.sleep(float(retry_after) + 0.5)
             time.sleep(delay)
     except Exception as e:
-        print(Colorate.Horizontal(Colors.cyan_to_blue, f"Error sending message: {e}"))
+        print(Colorate.Horizontal(Colors.cyan_to_blue, f"{e}"))
 
     print(Colorate.Horizontal(Colors.cyan_to_blue, "Spam stopped."))
 
@@ -75,7 +75,7 @@ def delete_webhook(webhook_url):
         else:
             print(Colorate.Horizontal(Colors.cyan_to_blue,f"Failed to delete webhook: {response.text}"))
     except Exception as e:
-        print(Colorate.Horizontal(Colors.cyan_to_blue, f"Error deleting webhook: {e}"))
+        print(Colorate.Horizontal(Colors.cyan_to_blue, f"{e}"))
 
 def main():
     banner = """
